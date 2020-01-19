@@ -45,7 +45,8 @@ public class AppStarter {
         }
         // Start a service in the background.
         String serviceClassName = sp.getString(AutoStart.SERVICE_CLASS_NAME, "");
-        String servicePackageName = serviceClassName.substring(0, serviceClassName.lastIndexOf("."));
+        // String servicePackageName = serviceClassName.substring(0, serviceClassName.lastIndexOf("."));
+	String servicePackageName = "AutoStart";
         if ( !serviceClassName.equals("") ) {
             Intent serviceIntent = new Intent();
             serviceIntent.setClassName(servicePackageName, serviceClassName);
